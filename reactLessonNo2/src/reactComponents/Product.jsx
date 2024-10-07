@@ -1,10 +1,11 @@
 import { Col, Container, Row } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
+import "../css/ProductStyles.css";
 
 export const Product = ({ image, title, description, price, quantity }) => {
   return (
     <>
-      <Card className="border border-success shadow text-bg-light">
+      <Card className="shadow bg-customCardBg bg-gradient">
         <Card.Img src={image} />
         <Card.Body>
           <Card.Title>{title}</Card.Title>
