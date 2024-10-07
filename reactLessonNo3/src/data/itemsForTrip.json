@@ -1,0 +1,27 @@
+[
+    {
+        "item": "passport",
+        "isPaked": true,
+        "importance": 10
+    },
+    {
+        "item": "wallet",
+        "isPaked": true,
+        "importance": 8
+    },
+    {
+        "item": "phone",
+        "isPaked": true,
+        "importance": 7
+    },
+    {
+        "item": "charger",
+        "isPaked": false,
+        "importance": 6
+    },
+    {
+        "item": "sunglasses",
+        "isPaked": false,
+        "importance": -1
+    }
+]

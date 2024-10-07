@@ -2,10 +2,9 @@ import { Product } from "./Product";
 import productsData from "../data/productsData.json";
 import { Container, Row, Col } from "react-bootstrap";
 
-const bgTheme = 
-  {
-    backgroundColor: "#ADAA80",
-  };
+const bgTheme = {
+  backgroundColor: "#ADAA80",
+};
 
 export const ProductList = () => {
   return (
@@ -19,6 +18,7 @@ export const ProductList = () => {
                 title={product.title}
                 description={product.description}
                 price={product.price}
+                discount={product.discount}
                 quantity={product.quantity}
               />
             </Col>
