@@ -1,5 +1,5 @@
 {
-  "name": "react10_01",
+  "name": "reactlessonno2",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -14,7 +14,6 @@
     "@emotion/styled": "^11.13.0",
     "@mui/material": "^6.1.2",
     "bootstrap": "^5.3.3",
-    "eslint-plugin-jsx-a11y": "^6.10.0",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.5",
     "react-dom": "^18.3.1",
@@ -27,6 +26,7 @@
     "@vitejs/plugin-react-swc": "^3.5.0",
     "eslint": "^9.9.0",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jsx-a11y": "^6.10.0",
     "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",

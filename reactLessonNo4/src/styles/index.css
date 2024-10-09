@@ -1,0 +1,28 @@
+.sankofa-display-regular {
+    font-family: "Sankofa Display", sans-serif;
+    font-weight: 800;
+    font-size: 5rem;
+    font-style: normal;
+}
+hr {
+    height: 5px;
+    border: none !important;
+    background-color: black;
+    opacity: 1 !important;
+}
+.bg-custom-gradient {
+    background-image: linear-gradient(to right, rgb(57, 172, 124), rgb(139, 54, 179));
+    height: 100vh;
+}
+.bg-custom-gradient-reverse {
+    background-image: linear-gradient(to right, rgb(139, 54, 179), rgb(57, 172, 124));
+    height: 100vh;
+}
+.bg-custom-gradient-reverse-reserved {
+    background-image: linear-gradient(to right, rgb(139, 54, 179), rgb(57, 172, 124));
+    height: 100vh;
+    filter: grayscale(1);
+}
+input {
+    background: rgb(57, 172, 124);
+}

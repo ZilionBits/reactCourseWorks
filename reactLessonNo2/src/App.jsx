@@ -1,12 +1,15 @@
 import { useState } from "react";
-import { ProductList } from "./reactComponents/ProductList";
-import { NavigationBar } from "./reactComponents/NavigationBar";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import { Header } from "./Header";
+import { Article } from "./Article";
+import CardComponent, { OtherCard } from "./CardComponent";
+import NavBar from "./reactLessonNo3/NavBar";
 
 function App() {
   return (
     <>
-        <NavigationBar />
-        <ProductList />
+      <NavBar />
     </>
   );
 }

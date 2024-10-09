@@ -2,7 +2,7 @@ import { Product } from "./Product";
 import productsData from "../data/productsData.json";
 import { Container, Row, Col } from "react-bootstrap";
 
-const bgTheme = {
+export const bgTheme = {
   backgroundColor: "#ADAA80",
 };
 

@@ -2,7 +2,7 @@
     {
         "image": "src/images/image1.png",
         "title": "Socks #1",
-        "description": "Blue sokcs with bikes",
+        "description": "Blue socks with bikes",
         "price": "14,95€",
         "quantity": "9",
         "discount": null

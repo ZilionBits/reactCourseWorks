@@ -1,6 +1,8 @@
 import { Col, Container, Row, Image } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import "../css/ProductStyles.css";
+import ModalForProduct from "./ModalForProduct";
+import { useState } from "react";
 
 export const Product = ({
   image,
@@ -10,9 +12,13 @@ export const Product = ({
   quantity,
   discount,
 }) => {
+  const [show, setShow] = useState(false);
+
+  const handleShow = () => setShow(true);
+
   return (
     <>
-      <Card className="shadow bg-customCardBg bg-gradient">
+      <Card className="shadow bg-customCardBg bg-gradient" onClick={handleShow}>
         <Card.Img src={image} />
         <Card.Body>
           <Card.Title>{title}</Card.Title>
@@ -43,6 +49,13 @@ export const Product = ({
           </Container>
         </Card.Body>
       </Card>
+      <ModalForProduct
+        title={title}
+        description={description}
+        quantity={quantity}
+        show={show}
+        close={() => setShow(false)}
+      />
     </>
   );
 };
