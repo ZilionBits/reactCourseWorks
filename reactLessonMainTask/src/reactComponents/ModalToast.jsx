@@ -11,16 +11,13 @@ function ModalToast({ title }) {
       <Button variant="primary" onClick={() => setShow(true)}>
         Add to Cart
       </Button>
-        <ToastContainer position="middle-center">
-          <Toast
-            onClose={() => setShow(false)}
-            show={show}
-            delay={3000}
-            autohide
-          >
-            <Toast.Body className="custom-toast-style"><strong>Successfully added: {title}</strong></Toast.Body>
-          </Toast>
-        </ToastContainer>
+      <ToastContainer position="middle-center">
+        <Toast onClose={() => setShow(false)} show={show} delay={3000} autohide>
+          <Toast.Body className="custom-toast-style">
+            <strong>Successfully added: {title}</strong>
+          </Toast.Body>
+        </Toast>
+      </ToastContainer>
     </>
   );
 }

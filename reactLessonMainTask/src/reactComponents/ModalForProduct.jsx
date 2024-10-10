@@ -10,17 +10,17 @@ function ModalForProduct({ title, description, quantity, show, close }) {
     <>
       <Modal show={show} onHide={handleClose}>
         <div className="custom-modal-style">
-        <Modal.Header>
-          <Modal.Title>{title}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>{description}</Modal.Body>
-        <Modal.Body>Quantity: {quantity}</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <ModalToast title={title} />
-        </Modal.Footer>
+          <Modal.Header>
+            <Modal.Title>{title}</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>{description}</Modal.Body>
+          <Modal.Body>Quantity: {quantity}</Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+            <ModalToast title={title} />
+          </Modal.Footer>
         </div>
       </Modal>
     </>
