@@ -1,0 +1,50 @@
+[
+    {
+        "image": "src/images/image1.png",
+        "title": "Socks #1",
+        "description": "Blue socks with bikes",
+        "price": "14,95€",
+        "quantity": "9",
+        "discount": null
+    },
+    {
+        "image": "src/images/image2.png",
+        "title": "Socks #2",
+        "description": "Retro brown socks",
+        "price": "14,95€",
+        "quantity": "10+",
+        "discount": null
+    },
+    {
+        "image": "src/images/image3.png",
+        "title": "Socks #3",
+        "description": "Happy dog green socks",
+        "price": "14,95€",
+        "quantity": "3",
+        "discount": null
+    },
+    {
+        "image": "src/images/image4.png",
+        "title": "Socks #4",
+        "description": "Pink scary socks",
+        "price": "14,95€",
+        "quantity": "5",
+        "discount": 10
+    },
+    {
+        "image": "src/images/image5.png",
+        "title": "Socks #5",
+        "description": "Colorful flower socks",
+        "price": "14,95€",
+        "quantity": "1",
+        "discount": 50
+    },
+    {
+        "image": "src/images/image6.png",
+        "title": "Socks #6",
+        "description": "Star violet socks",
+        "price": "14,95€",
+        "quantity": "10+",
+        "discount": 25
+    }
+]

@@ -5,7 +5,7 @@ export const robotData = [
       username: "Siddhu",
       email: "muffin@gmail.com",
       avatar: "https://robohash.org/set_set3/bgset_bg1/1?size=200x200",
-      reserved: true
+      reserved: false
     },
     {
       id: 2,

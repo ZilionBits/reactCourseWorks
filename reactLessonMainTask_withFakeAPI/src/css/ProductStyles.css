@@ -1,0 +1,5 @@
+.bg-customCardBg {
+  --bs-bg-opacity: 0.8;
+  background-color: rgba(245, 233, 76, var(--bs-bg-opacity)) !important;
+  /* background-color: rgb(245, 233, 76); */
+}
