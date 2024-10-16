@@ -1,4 +1,4 @@
-import { Col, Container, Row, Image, Button } from "react-bootstrap";
+import { Col, Container, Row} from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import "../css/ProductStyles.css";
 import ModalForProduct from "./ModalForProduct";

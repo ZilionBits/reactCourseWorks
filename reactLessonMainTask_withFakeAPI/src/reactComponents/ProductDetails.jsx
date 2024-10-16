@@ -5,12 +5,12 @@ import "../css/ProductDetail.css";
 import { Container, Row, Col, Image, Stack } from "react-bootstrap";
 
 export const ProductDetails = () => {
-  const [productDetails, setProductDetails] = useState({});
+  const [productDetails, setProductDetails] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
     axios
-      .get(`https://fakestoreapi.com/products/${id}`)
+      .get(`https://dummyjson.com/products/${id}`)
       .then((p) => setProductDetails(p.data))
       .catch((error) => console.log(error));
   }, []);
@@ -20,7 +20,7 @@ export const ProductDetails = () => {
       <Container fluid>
         <Row>
           <Col xs={5}>
-            <Image src={productDetails.image} fluid />
+            <Image src={productDetails.thumbnail} fluid />
           </Col>
           <Col>
             <Stack gap={2}>

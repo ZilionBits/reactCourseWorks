@@ -11,10 +11,10 @@ export const ProductList = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products?limit=55")
+    fetch('https://dummyjson.com/products')
       .then((res) => res.json())
       .then((data) => {
-        setFakeData(data);
+        setFakeData(data.products);
         setIsLoading(false);
       })
       .catch((error) => console.log(error));
@@ -33,7 +33,7 @@ export const ProductList = () => {
           {fakeData.map((product) => (
             <Product
               key={product.id}
-              image={product.image}
+              image={product.images[0]}
               title={product.title}
               description={product.description}
               price={product.price}
