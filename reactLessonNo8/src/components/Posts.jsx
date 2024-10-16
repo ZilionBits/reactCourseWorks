@@ -1,4 +1,12 @@
+import { Link, Outlet } from "react-router-dom";
+
 const Posts = () => {
-    return <div><h1>Posts</h1></div>
-}
+  return (
+    <div>
+      <Link to={"comments"}>Read comments</Link>
+      <h1>Posts</h1>
+      <Outlet />
+    </div>
+  );
+};
 export default Posts;

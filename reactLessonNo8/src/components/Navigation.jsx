@@ -8,13 +8,13 @@ const Navigation = () => {
           <Link to="/">Homepage</Link>
         </li>
         <li>
-          <Link to="/Posts">Posts</Link>
+          <Link to="/posts">Posts</Link>
         </li>
         <li>
-          <Link to="/About">About me</Link>
+          <Link to="/about">About me</Link>
         </li>
         <li>
-          <Link to="/Contacts">Contacts</Link>
+          <Link to="/contacts">Contacts</Link>
         </li>
       </ul>
     </nav>

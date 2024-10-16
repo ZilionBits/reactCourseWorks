@@ -3,12 +3,11 @@ import Card from "react-bootstrap/Card";
 import CartAddToast from "./CartAddToast";
 import { useState } from "react";
 
-function ItemCard({ name, price, category, image, item , addSelectedItems}) {
+function ItemCard({ name, price, category, image, item, addSelectedItems }) {
   const [show, setShow] = useState(false);
 
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
-
 
   return (
     <>
@@ -35,12 +34,3 @@ function ItemCard({ name, price, category, image, item , addSelectedItems}) {
 }
 
 export default ItemCard;
-
-
-
-  // const [selectedItems, setSelectedItems] = useState([]);
-
-  // const addSelectedItems = () => {
-  //   setSelectedItems([...selectedItems, item]);
-  //   console.log(item);
-  // };

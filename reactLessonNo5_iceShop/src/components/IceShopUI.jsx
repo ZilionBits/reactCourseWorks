@@ -50,7 +50,9 @@ export const IceShopUI = () => {
               <Col>Discount: {discount} %</Col>
               <Col>Subtotal: {sum} €</Col>
               <Col>
-                <strong>Total: {sum * (1 - discount / 100)}</strong>
+                <strong>
+                  Total: {(sum * (1 - discount / 100)).toFixed(2)}
+                </strong>
               </Col>
             </Row>
           </Col>

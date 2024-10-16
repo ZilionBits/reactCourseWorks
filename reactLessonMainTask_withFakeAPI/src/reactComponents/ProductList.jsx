@@ -37,6 +37,7 @@ export const ProductList = () => {
               title={product.title}
               description={product.description}
               price={product.price}
+              id={product.id}
             />
           ))}
         </Masonry>
