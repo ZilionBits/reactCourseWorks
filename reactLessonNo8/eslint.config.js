@@ -6,32 +6,20 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
-    "plugin:import/recommended",
-    "plugin:jsx-a11y/recommended",
-    "eslint-config-prettier",
+    "react-app",
+    "react-app/jest",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
   ],
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parserOptions: { ecmaVersion: "latest", sourceType: "module" },
-  settings: {
-    react: { version: "detect" },
-    "import/resolver": {
-      node: { paths: ["src"], extensions: [".js", ".jsx"] },
-    },
-  },
+  settings: { react: { version: "18.2" } },
   plugins: ["react-refresh"],
   rules: {
-    "no-unused-vars": [
-      "error",
-      {
-        vars: "all",
-        args: "after-used",
-        ignoreRestSiblings: true,
-        argsIgnorePattern: "^_",
-      },
-    ],
     "react-refresh/only-export-components": [
       "warn",
       { allowConstantExport: true },
     ],
+    "react/prop-types": 0,
   },
 };

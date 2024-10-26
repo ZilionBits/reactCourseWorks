@@ -9,6 +9,8 @@ module.exports = {
     "plugin:import/recommended",
     "plugin:jsx-a11y/recommended",
     "eslint-config-prettier",
+    'plugin:@typescript-eslint/recommended',
+    'prettier/@typescript-eslint',
   ],
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parserOptions: { ecmaVersion: "latest", sourceType: "module" },

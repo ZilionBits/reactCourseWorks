@@ -1,10 +1,10 @@
 import { Image, Button, Stack } from "react-bootstrap";
 import { useContext } from "react";
 import { AuthenticationContext } from "../contextComponents/AuthenticationContext";
-import { Outlet, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const Profile = () => {
-  const { toggleStatus } = useContext(AuthenticationContext);
+  const { logout} = useContext(AuthenticationContext);
   const navigate = useNavigate();
 
   return (
@@ -17,8 +17,7 @@ export const Profile = () => {
       <Button
         className="bg-danger border-0"
         onClick={() => {
-          toggleStatus();
-          navigate("/");
+          logout();
         }}
       >
         Logout

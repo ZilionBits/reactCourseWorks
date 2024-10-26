@@ -9,6 +9,7 @@ import { Details } from "./components/Details";
 import { EditPost } from "./components/EditPost";
 import { PostsWithImage } from "./components/PostsWithImage";
 import React, { Suspense } from "react";
+import Register from "./components/Register"
 
 const About = React.lazy(() => import("./components/About"));
 
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="*" element={<NotFound />} />
         <Route path="/" element={<Homepage />} />
+        <Route path="/register" element={<Register />} />
         <Route
           path="/about"
           element={
