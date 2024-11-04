@@ -1,0 +1,6 @@
+.bg-custom-main {
+  background-image: url("..\images\city-lights-through-rain-window.jpg");
+  height: 100vh;
+  background-size: cover;
+  color:antiquewhite;
+}

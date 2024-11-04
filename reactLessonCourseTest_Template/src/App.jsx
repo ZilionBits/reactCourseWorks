@@ -1,13 +1,15 @@
-import { useState } from "react";
-import { ProductList } from "./reactComponents/ProductList";
-import { NavigationBar } from "./reactComponents/NavigationBar";
+import { Routes, Route } from "react-router-dom";
+import { Homepage } from "./pages/Homepage";
 
 function App() {
   return (
-    <>
-        <NavigationBar />
-        <ProductList />
-    </>
+    <div className="bg-custom-main">
+    <Routes>
+      <Route path="/" element={<Homepage/>}>
+
+      </Route>
+    </Routes>
+    </div>
   );
 }
 
