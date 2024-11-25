@@ -9,7 +9,7 @@ export const BooksList = () => {
     const {booksData, setBooksData} = useContext(GlobalDataContext);
 
 useEffect(() => {
-    axios.get("https://mondayexam.onrender.com/api/v1/books")
+    axios.get("http://localhost:8080/api/v1/books")
     .then((data) => setBooksData(data.data))
     .catch((error) => console.log(error))
 }, []);

@@ -3,8 +3,15 @@ import Card from 'react-bootstrap/Card';
 import axios from 'axios';
 import { BookCommentModal } from './BookCommentModal';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export const BookCard = ({title,author,category,price,cover,reserved,exactBook}) => {
+
+    const navigate = useNavigate();
+
+    const navigateToUpdatePage = () => {
+        navigate("/updateBookForm", { state: {book: exactBook}});
+    }
 
     const [show, setShow] = useState(false);
 
@@ -14,10 +21,16 @@ export const BookCard = ({title,author,category,price,cover,reserved,exactBook})
     const handleClose = () => {
         setShow(false);
     }
+
+    const deleteBook = () => {
+        axios.delete(`http://localhost:8080/api/v1/books/${exactBook.id}`)
+        .catch(error => console.log(error));
+        window.location.reload();
+    }
     
     const updateBookReservation = () => {
         console.log(exactBook.id);
-    axios.put(`https://mondayexam.onrender.com/api/v1/books/${exactBook.id}`, 
+    axios.put(`http://localhost:8080/api/v1/books/${exactBook.id}`, 
         {
             "title": exactBook.title,
             "author": exactBook.author,
@@ -28,6 +41,7 @@ export const BookCard = ({title,author,category,price,cover,reserved,exactBook})
         })
     .then((res) => console.log(res))
     .catch((error) => console.log(error));
+    window.location.reload();
     }
 
     console.log(exactBook);
@@ -45,6 +59,8 @@ export const BookCard = ({title,author,category,price,cover,reserved,exactBook})
           : 
           <Button onClick={updateBookReservation}>Išduoti</Button>}
           <Button onClick={handleShow}>Leave Comment</Button>
+          <Button onClick={navigateToUpdatePage}>Update Book</Button>
+          <Button onClick={deleteBook}>Delete Book</Button>
         </Card.Body>
         <BookCommentModal 
         show={show}

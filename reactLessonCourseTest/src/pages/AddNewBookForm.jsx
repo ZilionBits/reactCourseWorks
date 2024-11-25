@@ -16,7 +16,7 @@ const AddNewBookForm = () => {
   const [postDataReturn, setConfirmDataReturn] = useState({});
 
   const onSubmit = (data) => {
-    fetch(`https://mondayexam.onrender.com/api/v1/books/`, {
+    fetch(`http://localhost:8080/api/v1/books`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
