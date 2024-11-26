@@ -1,15 +1,19 @@
 import { GlobalDataContext } from "../contextGlobal/GlobalData";
 import { BookCard } from "./BookCard";
 import { useEffect, useContext } from "react";
-import axios from "axios";
 import { Container, Row, Col } from "react-bootstrap";
+import AuthContext from "../contextGlobal/AuthContext";
+import { libraryApi } from "../libraryApi/LibraryApi";
 
 export const BooksList = () => {
 
     const {booksData, setBooksData} = useContext(GlobalDataContext);
+    const {getUser} = useContext(AuthContext);
+    const userToken = getUser();
 
 useEffect(() => {
-    axios.get("http://localhost:8080/api/v1/books")
+
+    libraryApi.getAllBooks(userToken)
     .then((data) => setBooksData(data.data))
     .catch((error) => console.log(error))
 }, []);
