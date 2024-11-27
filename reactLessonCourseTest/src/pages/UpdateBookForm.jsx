@@ -4,7 +4,6 @@ import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const UpdateBookForm = () => {
-
   const navigate = useNavigate();
   const location = useLocation();
   const { book } = location.state || {};
@@ -13,7 +12,7 @@ const UpdateBookForm = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({defaultValues: book || {}});
+  } = useForm({ defaultValues: book || {} });
 
   const [postDataReturn, setConfirmDataReturn] = useState({});
 
@@ -25,55 +24,47 @@ const UpdateBookForm = () => {
     })
       .then((res) => res.json())
       .then((get) => setConfirmDataReturn(get));
-      navigate("/booksList");
+    navigate("/booksList");
   };
 
   console.log(postDataReturn);
-  
-    return (
-      <div style={{backgroundColor: "grey"}}>
-        <form
+
+  return (
+    <div style={{ backgroundColor: "grey" }}>
+      <form
         onSubmit={handleSubmit(onSubmit)}
         style={{ width: "50%", margin: "auto" }}
       >
-        <h1 className="text-center">
-          Update selected book information
-        </h1>
+        <h1 className="text-center">Update selected book information</h1>
         <Stack gap={2}>
           <label>Title:</label>
           <input {...register("title", { required: true })} />
           {errors.title && <span>Title is required</span>}
-  
+
           <label>Price:</label>
-          <input
-            {...register("price", { required: true, min: 0 })}
-          />
+          <input {...register("price", { required: true, min: 0 })} />
           {errors.price && <span>Number must be positive</span>}
-  
+
           <label>Book author:</label>
-          <input 
-            {...register("author", { required: true })} />
+          <input {...register("author", { required: true })} />
           {errors.author && <span>Author is required</span>}
-  
+
           <label>Book category:</label>
           <input {...register("category", { required: true })} />
           {errors.category && <span>Category is required</span>}
-   
+
           <label>Book cover URL:</label>
           <input {...register("cover", { required: true })} />
-          {errors.cover && <span>Cover URL is required</span>} 
+          {errors.cover && <span>Cover URL is required</span>}
 
           <label>Reserved:</label>
-          <input 
-          type="checkbox"
-          {...register("reserved")} />
+          <input type="checkbox" {...register("reserved")} />
 
-  
           <input type="submit" />
         </Stack>
       </form>
-      </div>
-    );
+    </div>
+  );
 };
 
 export default UpdateBookForm;
