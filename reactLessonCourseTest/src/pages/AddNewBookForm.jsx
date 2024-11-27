@@ -2,8 +2,13 @@ import { Stack } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { libraryApi } from "../libraryApi/LibraryApi";
+import { useAuth } from "../contextGlobal/AuthContext";
 
 const AddNewBookForm = () => {
+
+  const Auth = useAuth();
+  const token = Auth.getUser();
 
   const {
     register,
@@ -16,12 +21,7 @@ const AddNewBookForm = () => {
   const [postDataReturn, setConfirmDataReturn] = useState({});
 
   const onSubmit = (data) => {
-    fetch(`http://localhost:8080/api/v1/books`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
+    libraryApi.addNewBook(data, token)
       .then((get) => setConfirmDataReturn(get));
       navigate("/booksList");
   };

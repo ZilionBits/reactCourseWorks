@@ -14,6 +14,8 @@ export const libraryApi = {
   createOrder,
   getUserMe,
   getAllBooks,
+  addNewBook,
+  deleteBook,
 };
 
 function authenticate(username, password) {
@@ -34,6 +36,22 @@ function signup(user) {
 
 function getAllBooks(userToken) {
   return instance.get("http://localhost:8080/api/v1/books", {
+    headers: {
+      Authorization: `Bearer ${userToken}`,
+    },
+  });
+}
+
+function addNewBook(data, userToken) {
+  return instance.post(`http://localhost:8080/api/v1/books`, data, {
+    headers: { 
+      Authorization: `Bearer ${userToken}`,
+     },
+  });
+}
+
+function deleteBook(bookId, userToken){
+  return instance.delete(`http://localhost:8080/api/v1/books/${bookId}`, {
     headers: {
       Authorization: `Bearer ${userToken}`,
     },
