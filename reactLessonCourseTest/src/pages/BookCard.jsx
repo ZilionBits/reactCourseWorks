@@ -41,17 +41,8 @@ export const BookCard = ({
   };
 
   const updateBookReservation = () => {
-    console.log(exactBook.id);
-    axios
-      .put(`http://localhost:8080/api/v1/books/${exactBook.id}`, {
-        title: exactBook.title,
-        author: exactBook.author,
-        category: exactBook.category,
-        price: exactBook.price,
-        cover: exactBook.cover,
-        reserved: !exactBook.reserved,
-      })
-      .then((res) => console.log(res))
+    libraryApi.updateBookReservation(exactBook.id,exactBook,token)
+      .then((res) => console.log(res.data))
       .catch((error) => console.log(error));
   };
 

@@ -16,6 +16,8 @@ export const libraryApi = {
   getAllBooks,
   addNewBook,
   deleteBook,
+  updateBook,
+  updateBookReservation
 };
 
 function authenticate(username, password) {
@@ -44,6 +46,29 @@ function getAllBooks(userToken) {
 
 function addNewBook(data, userToken) {
   return instance.post(`http://localhost:8080/api/v1/books`, data, {
+    headers: { 
+      Authorization: `Bearer ${userToken}`,
+     },
+  });
+}
+
+function updateBook(bookId, data, userToken) {
+  return instance.put(`http://localhost:8080/api/v1/books/${bookId}`, data, {
+    headers: { 
+      Authorization: `Bearer ${userToken}`,
+     },
+  });
+}
+
+function updateBookReservation(bookId, exactBook, userToken) {
+  return instance.put(`http://localhost:8080/api/v1/books/${bookId}`, {
+        title: exactBook.title,
+        author: exactBook.author,
+        category: exactBook.category,
+        price: exactBook.price,
+        cover: exactBook.cover,
+        reserved: !exactBook.reserved,
+      }, {
     headers: { 
       Authorization: `Bearer ${userToken}`,
      },
