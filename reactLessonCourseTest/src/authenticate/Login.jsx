@@ -36,7 +36,7 @@ function Login() {
       const data = parseJwt(accessToken);
       const authenticatedUser = { data, accessToken };
 
-      Auth.userLogin(authenticatedUser, accessToken);
+      Auth.userLogin(accessToken);
 
       setUser(authenticatedUser);
       setUsername("");

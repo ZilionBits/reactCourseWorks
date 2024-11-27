@@ -28,9 +28,8 @@ function AuthProvider({ children }) {
     return true;
   };
 
-  const userLogin = (user, token) => {
+  const userLogin = (token) => {
     localStorage.setItem("user", token);
-    setUser(user);
   };
 
   const userLogout = () => {

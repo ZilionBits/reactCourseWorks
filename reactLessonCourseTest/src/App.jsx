@@ -8,6 +8,7 @@ import AddNewBookForm from "./pages/AddNewBookForm";
 import UpdateBookForm from "./pages/UpdateBookForm";
 import Login from "./authenticate/Login";
 import { AuthProvider } from "./contextGlobal/AuthContext";
+import Signup from "./authenticate/Signup";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Homepage/>}/>
       <Route path="/login" element={<Login/>}/>
+      <Route path="/signup" element={<Signup/>}/>
       <Route path="/booksList" element={<BooksList/>}/>
       <Route path="/addNewBookForm" element={<AddNewBookForm/>}/>
       <Route path="/updateBookForm" element={<UpdateBookForm/>}/>
